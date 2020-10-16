@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Ecommerce</title>
+</head>
+<body>
+    <div class="main_wrap">
+    <section id="main">
+        <header>
+            <div class="hamburger">
+                <img src="./img/Logo.png" alt="">
+            </div>
+        </header>
+        
+        <div class="menu_wrap">
+        <nav class="menu">
+            <ul class="depth1">
+                <li><a href="#"> HOME </a>
+                    <ul class="depth2">
+                        <li>menu1</li>
+                        <li>menu2</li>
+                        <li>menu3</li>
+                    </ul>
+                </li>
+
+                <li><a href="#"> SHOP </a>
+                    <ul class="depth2">
+                        <li>menu1</li>
+                        <li>menu2</li>
+                        <li>menu3</li>
+                    </ul>
+                </li>
+
+                <li><a href="#"> MAGAZINE </a>
+                    <ul class="depth2">
+                        <li>menu1</li>
+                        <li>menu2</li>
+                        <li>menu3</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav> 
+
+        <nav class="menu_right">
+            <ul>
+                <li><img src="./img/Add to Cart Button.png" alt=""></li>
+                <li>LOGIN</li>
+            </ul>
+        </nav>
+    </div>
+    
+    <section id="content">
+        <div class="top">
+            <img src="./img/그룹 1.png" alt="">
+
+            <div class="living">
+                living room                
+            </div>
+
+            <div class="best">
+                <span> Best match </span>
+                <img src="./img/Arrow.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom_wrap">
+    <section id="bottom1">
+        <div class="filterby">FILTER BY</div>
+        <div class="filter">
+            <div>Collection <img src="./img/Arrow.png" alt=""></div>
+            <div>Color <img src="./img/Arrow.png" alt=""></div>
+            <div>Category <img src="./img/Arrow.png" alt=""></div>
+            <div>
+                <p>Price Range</p>
+                <div slider id="slider-distance">
+                    <div>
+                      <div inverse-left style="width:70%;"></div>
+                      <div inverse-right style="width:70%;"></div>
+                      <div range style="left:30%;right:40%;"></div>
+                      <span thumb style="left:30%;"></span>
+                      <span thumb style="left:60%;"></span>
+                      <div sign style="left:30%;">
+                        <span id="value">30</span>
+                      </div>
+                      <div sign style="left:60%;">
+                        <span id="value">60</span>
+                      </div>
+                    </div>
+                    <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+                    this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                    var children = this.parentNode.childNodes[1].childNodes;
+                    children[1].style.width=value+'%';
+                    children[5].style.left=value+'%';
+                    children[7].style.left=value+'%';children[11].style.left=value+'%';
+                    children[11].childNodes[1].innerHTML=this.value;" />
+                    <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+                    this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                    var children = this.parentNode.childNodes[1].childNodes;
+                    children[3].style.width=(100-value)+'%';
+                    children[5].style.right=(100-value)+'%';
+                    children[9].style.left=value+'%';children[13].style.left=value+'%';
+                    children[13].childNodes[1].innerHTML=this.value;" />
+                  </div>
+            </div>
+        </div>
+
+        <div class="product1">
+            <div class="p1">
+                <img src="./img/Image-6.png" alt="">
+                <div class="text">
+                    <ul>
+                        <li>Coombes</li>
+                        <li>Lounge</li>
+                        <li>★★★★☆</li>
+                    </ul>
+                </div>
+                <div class="price">
+                    <ul>
+                        <li>$2,600</li>
+                        <li><img src="./img/Add to Cart Button.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>    
+
+                <div class="p1">
+                    <img src="./img/Image-5.png" alt="">
+                    <div class="text">
+                        <ul>
+                            <li>Coombes</li>
+                            <li>Lounge</li>
+                            <li>★★★★☆</li>
+                        </ul>
+                    </div>
+                    <div class="price">
+                        <ul>
+                            <li>$2,600</li>
+                            <li><img src="./img/Add to Cart Button.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="p1">
+                    <img src="./img/Image-4.png" alt="">
+                    <div class="text">
+                        <ul>
+                            <li>Coombes</li>
+                            <li>Lounge</li>
+                            <li>★★★★☆</li>
+                        </ul>
+                    </div>
+                    <div class="price">
+                        <ul>
+                            <li>$2,600</li>
+                            <li><img src="./img/Add to Cart Button.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- product1 end -->
+
+
+            <div class="product2">
+                <div class="p2">
+                    <img src="./img/Image-3.png" alt="">
+                    <div class="text">
+                        <ul>
+                            <li>Coombes</li>
+                            <li>Lounge</li>
+                            <li>★★★★☆</li>
+                        </ul>
+                    </div>
+                    <div class="price">
+                        <ul>
+                            <li>$2,600</li>
+                            <li><img src="./img/Add to Cart Button.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>   
+
+                <div class="p2">
+                    <img src="./img/Image-2.png" alt="">
+                    <div class="text">
+                        <ul>
+                            <li>Coombes</li>
+                            <li>Lounge</li>
+                            <li>★★★★☆</li>
+                        </ul>
+                    </div>
+                    <div class="price">
+                        <ul>
+                            <li>$2,600</li>
+                            <li><img src="./img/Add to Cart Button.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>    
+    
+                    <div class="p2">
+                        <img src="./img/Image-1.png" alt="">
+                        <div class="text">
+                            <ul>
+                                <li>Coombes</li>
+                                <li>Lounge</li>
+                                <li>★★★★☆</li>
+                            </ul>
+                        </div>
+                        <div class="price">
+                            <ul>
+                                <li>$2,600</li>
+                                <li><img src="./img/Add to Cart Button.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="p2">
+                        <img src="./img/Image.png" alt="">
+                        <div class="text">
+                            <ul>
+                                <li>Coombes</li>
+                                <li>Lounge</li>
+                                <li>★★★★☆</li>
+                            </ul>
+                        </div>
+                        <div class="price">
+                            <ul>
+                                <li>$2,600</li>
+                                <li><img src="./img/Add to Cart Button.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- product1 end -->
+                
+                
+    </section> <!-- bottom1 end-->
+    </div> <!-- bottom wrap end-->
+</section>    
+
+    <div class="page">
+        <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+            <li><a href="#">></a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
